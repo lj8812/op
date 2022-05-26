@@ -24,3 +24,15 @@ EOF
 ./scripts/feeds install -a -f -p helloworld
 ./scripts/feeds update passwall
 ./scripts/feeds install -a -f -p passwall
+
+##############################################################################################
+
+# 主题
+git clone https://github.com/kenzok78/luci-theme-argonne.git package/luci-theme-argonne
+
+##############################################################################################
+
+# 服务
+
+#luci-app-adguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
