@@ -16,14 +16,6 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-cat >> feeds.conf.default <<EOF
-src-git helloword https://github.com/fw876/helloworld
-src-git passwall https://github.com/xiaorouji/openwrt-passwall
-EOF
-./scripts/feeds update helloworld
-./scripts/feeds install -a -f -p helloworld
-./scripts/feeds update passwall
-./scripts/feeds install -a -f -p passwall
 
 ##############################################################################################
 
@@ -36,3 +28,15 @@ git clone https://github.com/kenzok78/luci-theme-argonne.git package/luci-theme-
 
 #luci-app-adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+
+##############################################################################################
+
+cat >> feeds.conf.default <<EOF
+src-git helloword https://github.com/fw876/helloworld
+src-git passwall https://github.com/xiaorouji/openwrt-passwall
+EOF
+./scripts/feeds update helloworld
+./scripts/feeds install -a -f -p helloworld
+./scripts/feeds update passwall
+./scripts/feeds install -a -f -p passwall
+
